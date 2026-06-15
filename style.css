@@ -48,15 +48,25 @@ nav a{
 .hero{
   position:relative;
   min-height:100vh;
-  background:url('hero.jpg') center/cover no-repeat;
   display:flex;
   align-items:center;
   color:white;
+  overflow:hidden;
+  background:#050505;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:-18px;
+  background:url('hero.jpg') center/cover no-repeat;
+  filter:blur(7px);
+  transform:scale(1.04);
+  opacity:.88;
 }
 .hero__shade{
   position:absolute;
   inset:0;
-  background:linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.35),rgba(0,0,0,.08));
+  background:linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.52),rgba(0,0,0,.35));
 }
 .hero__content{
   position:relative;
