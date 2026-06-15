@@ -32,8 +32,8 @@ img{display:block;max-width:100%}
   backdrop-filter:blur(10px);
 }
 .logo img{
-  width:230px;
-  max-height:64px;
+  width:260px;
+  max-height:68px;
   object-fit:contain;
   filter:drop-shadow(0 3px 10px rgba(0,0,0,.6));
 }
@@ -230,7 +230,7 @@ footer{
 }
 @media(max-width:640px){
   .header{padding:12px 4vw}
-  .logo img{width:160px}
+  .logo img{width:180px}
   nav{gap:12px}
   nav a{font-size:.78rem}
   nav a:nth-child(1){display:none}
@@ -238,4 +238,44 @@ footer{
   .gallery{grid-template-columns:1fr;grid-auto-rows:360px}
   .gallery .wide,.gallery .tall{grid-column:auto;grid-row:auto}
   .intro,.servicios,.portfolio,.about-text,.contacto{padding:70px 6vw}
+}
+
+
+.video-section{
+  padding:95px 8vw;
+  background:
+    radial-gradient(circle at top right,rgba(214,163,31,.16),transparent 30%),
+    linear-gradient(180deg,#0a0a0a,#181818);
+  color:white;
+}
+.video-title{
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+}
+.video-title p:last-child{
+  max-width:680px;
+  margin-left:auto;
+  margin-right:auto;
+  color:#ddd;
+}
+.video-frame{
+  max-width:1050px;
+  margin:36px auto 0;
+  aspect-ratio:16/9;
+  border-radius:28px;
+  overflow:hidden;
+  box-shadow:0 24px 60px rgba(0,0,0,.45);
+  border:1px solid rgba(214,163,31,.35);
+  background:#000;
+}
+.video-frame iframe{
+  width:100%;
+  height:100%;
+  border:0;
+  display:block;
+}
+@media(max-width:640px){
+  .video-section{padding:70px 6vw}
+  .video-frame{border-radius:18px}
 }
