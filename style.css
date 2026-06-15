@@ -9,7 +9,7 @@
 </head>
 <body>
 <header class="site-header">
-  <a class="brand" href="#inicio"><img src="assets/logo.png" alt="Snapshot Fotografía"></a>
+  <a class="brand" href="#inicio"><img src="logo.png" alt="Snapshot Fotografía"></a>
   <nav>
     <a href="#portafolio">Portafolio</a>
     <a href="#servicios">Servicios</a>
@@ -58,19 +58,19 @@
     <h2>Bodas y XV años</h2>
   </div>
   <div class="masonry">
-    <img src="assets/boda-calle-luces.jpg" alt="Sesión de boda en calle iluminada">
-    <img src="assets/xv-blanco.jpg" alt="Sesión de XV años con atuendo blanco">
-    <img src="assets/anillos.jpg" alt="Anillos de boda">
-    <img src="assets/boda-arquitectura.jpg" alt="Pareja de boda en locación histórica">
-    <img src="assets/boda-abrazo.jpg" alt="Novios abrazados">
-    <img src="assets/boda-escalera.jpg" alt="Novios bajando una escalera">
-    <img src="assets/boda-castillo.jpg" alt="Novios frente a arquitectura histórica">
-    <img src="assets/boda-ramo.jpg" alt="Novia lanzando el ramo">
-    <img src="assets/xv-noche-rojo.jpg" alt="Sesión de XV años con vestido rojo de noche">
-    <img src="assets/xv-jardin-rojo.jpg" alt="Sesión de XV años con vestido rojo en jardín">
-    <img src="assets/xv-calle-rojo.jpg" alt="Sesión de XV años en calle estilo hacienda">
-    <img src="assets/boda-jardin.jpg" alt="Novios en jardín">
-    <img src="assets/boda-hacienda.jpg" alt="Novios en hacienda">
+    <img src="boda-calle-luces.jpg" alt="Sesión de boda en calle iluminada">
+    <img src="xv-blanco.jpg" alt="Sesión de XV años con atuendo blanco">
+    <img src="anillos.jpg" alt="Anillos de boda">
+    <img src="boda-arquitectura.jpg" alt="Pareja de boda en locación histórica">
+    <img src="boda-abrazo.jpg" alt="Novios abrazados">
+    <img src="boda-escalera.jpg" alt="Novios bajando una escalera">
+    <img src="boda-castillo.jpg" alt="Novios frente a arquitectura histórica">
+    <img src="boda-ramo.jpg" alt="Novia lanzando el ramo">
+    <img src="xv-noche-rojo.jpg" alt="Sesión de XV años con vestido rojo de noche">
+    <img src="xv-jardin-rojo.jpg" alt="Sesión de XV años con vestido rojo en jardín">
+    <img src="xv-calle-rojo.jpg" alt="Sesión de XV años en calle estilo hacienda">
+    <img src="boda-jardin.jpg" alt="Novios en jardín">
+    <img src="boda-hacienda.jpg" alt="Novios en hacienda">
   </div>
 </section>
 
