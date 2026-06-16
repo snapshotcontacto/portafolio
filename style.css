@@ -31,7 +31,7 @@ img{display:block;max-width:100%}
   background:rgba(8,8,8,.78);
   backdrop-filter:blur(10px);
 }
-.logo img{
+.Logo img{
   width:260px;
   max-height:68px;
   object-fit:contain;
@@ -240,7 +240,7 @@ footer{
 }
 @media(max-width:640px){
   .header{padding:12px 4vw}
-  .logo img{width:180px}
+  .Logo img{width:180px}
   nav{gap:12px}
   nav a{font-size:.78rem}
   nav a:nth-child(1){display:none}
