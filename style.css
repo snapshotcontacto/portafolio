@@ -189,3 +189,181 @@
     color:#9a7419;
   }
 }
+
+
+/* ===========================
+   V4.0 HERO PREMIUM
+=========================== */
+.hero-premium{
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  color:white;
+  overflow:hidden;
+  background:#050505;
+}
+
+.hero-premium::before{
+  display:none;
+}
+
+.hero-bg{
+  position:absolute;
+  inset:-18px;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  transform:scale(1.06);
+  filter:blur(5px);
+  opacity:.72;
+}
+
+.hero-bg-1{
+  background-image:url('hero.jpg');
+  animation:heroFadeOne 18s ease-in-out infinite, heroDrift 18s ease-in-out infinite alternate;
+}
+
+.hero-bg-2{
+  background-image:url('boda-castillo.jpg');
+  animation:heroFadeTwo 18s ease-in-out infinite, heroDriftTwo 20s ease-in-out infinite alternate;
+}
+
+@keyframes heroFadeOne{
+  0%,42%{opacity:.78}
+  50%,92%{opacity:0}
+  100%{opacity:.78}
+}
+
+@keyframes heroFadeTwo{
+  0%,42%{opacity:0}
+  50%,92%{opacity:.72}
+  100%{opacity:0}
+}
+
+@keyframes heroDrift{
+  from{transform:scale(1.06) translateX(0)}
+  to{transform:scale(1.12) translateX(-18px)}
+}
+
+@keyframes heroDriftTwo{
+  from{transform:scale(1.08) translateX(10px)}
+  to{transform:scale(1.14) translateX(-12px)}
+}
+
+.hero-premium .hero__shade{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 72% 42%, rgba(214,163,31,.16), transparent 28%),
+    linear-gradient(90deg, rgba(0,0,0,.88), rgba(0,0,0,.58), rgba(0,0,0,.36));
+}
+
+.hero-premium .hero__content{
+  position:relative;
+  z-index:2;
+  max-width:1040px;
+  padding:130px 8vw 0;
+}
+
+.hero-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+}
+
+.hero-kicker::before{
+  content:"";
+  width:54px;
+  height:1px;
+  background:var(--oro);
+  display:inline-block;
+}
+
+.hero-premium h1{
+  max-width:980px;
+  letter-spacing:-.04em;
+  text-shadow:0 18px 55px rgba(0,0,0,.55);
+}
+
+.hero-subtitle{
+  font-size:clamp(1.05rem,1.6vw,1.35rem);
+  max-width:720px;
+  color:rgba(255,255,255,.9);
+}
+
+.hero-proof{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.hero-proof span{
+  border:1px solid rgba(255,255,255,.22);
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(8px);
+  padding:10px 14px;
+  border-radius:999px;
+  font-size:.78rem;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.scroll-cue{
+  position:absolute;
+  z-index:3;
+  bottom:34px;
+  left:50%;
+  transform:translateX(-50%);
+  width:30px;
+  height:48px;
+  border:1px solid rgba(255,255,255,.55);
+  border-radius:999px;
+  display:flex;
+  justify-content:center;
+  padding-top:8px;
+  opacity:.8;
+}
+
+.scroll-cue span{
+  width:5px;
+  height:5px;
+  background:white;
+  border-radius:999px;
+  animation:scrollDot 1.7s infinite;
+}
+
+@keyframes scrollDot{
+  0%{transform:translateY(0);opacity:1}
+  70%{transform:translateY(22px);opacity:0}
+  100%{transform:translateY(0);opacity:0}
+}
+
+@media(max-width:640px){
+  .hero-premium .hero__content{
+    padding:120px 6vw 60px;
+  }
+
+  .hero-kicker::before{
+    width:34px;
+  }
+
+  .hero-premium h1{
+    font-size:clamp(3.1rem,15vw,4.5rem);
+  }
+
+  .hero-subtitle{
+    font-size:1rem;
+  }
+
+  .hero-proof span{
+    font-size:.7rem;
+    padding:9px 12px;
+  }
+
+  .scroll-cue{
+    display:none;
+  }
+}
