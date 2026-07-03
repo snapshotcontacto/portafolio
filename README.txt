@@ -1,1 +1,1 @@
-Sube todo a la raíz del repositorio: boda-nancy-alfredo.html, boda-nancy-alfredo.css, boda-nancy-alfredo.js, Logo.png y la carpeta nancy-alfredo.
+Copia index.html, style.css, script.js y las carpetas signature-hero y signature-momentos a tu proyecto. Luego Commit y Push en GitHub Desktop.

@@ -19,12 +19,3 @@ closeBtn.addEventListener('click',closeLightbox);nextBtn.addEventListener('click
 lightbox.addEventListener('click',(e)=>{if(e.target===lightbox)closeLightbox()});
 document.addEventListener('keydown',(e)=>{if(!lightbox.classList.contains('open'))return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowRight')showNext();if(e.key==='ArrowLeft')showPrev()});
 let touchStartX=0;lightbox.addEventListener('touchstart',(e)=>{touchStartX=e.changedTouches[0].screenX});lightbox.addEventListener('touchend',(e)=>{const x=e.changedTouches[0].screenX;if(x<touchStartX-50)showNext();if(x>touchStartX+50)showPrev()});
-
-// Snapshot v4.1 · Navbar premium al hacer scroll
-const siteHeader=document.querySelector('.header');
-function updateHeaderState(){
-  if(!siteHeader)return;
-  siteHeader.classList.toggle('scrolled', window.scrollY>24);
-}
-updateHeaderState();
-window.addEventListener('scroll', updateHeaderState, {passive:true});
