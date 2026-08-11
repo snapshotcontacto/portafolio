@@ -192,7 +192,7 @@
   left:50%;
   width:min(88%,850px);
   transform:translateX(-50%);
-  color:#f5eadb;
+  color:#fff1dc !important;
   text-align:center;
 }
 .hero-single-copy h1{
@@ -203,6 +203,7 @@
   font-weight:400;
   line-height:1;
   letter-spacing:-.035em;
+  -webkit-text-stroke:.35px rgba(35,17,9,.7);
   text-shadow:0 2px 3px rgba(24,12,7,.82),0 0 18px rgba(24,12,7,.38);
 }
 .hero-single-copy p{
@@ -212,6 +213,7 @@
   font-weight:700;
   letter-spacing:.18em;
   text-transform:uppercase;
+  color:#fff1dc !important;
   text-shadow:0 1px 3px rgba(24,12,7,.92),0 0 12px rgba(24,12,7,.5);
 }
 .hero-quiet-actions{

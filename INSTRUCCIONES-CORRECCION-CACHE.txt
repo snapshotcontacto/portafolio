@@ -1,0 +1,18 @@
+CORRECCIÓN DE COLOR Y CACHÉ — PORTADA SNAPSHOT
+
+Sustituir estos dos archivos en la raíz del repositorio:
+
+1. index.html
+2. style.css
+
+Es necesario sustituir ambos. index.html añade una versión a la dirección de la hoja de estilos para obligar al navegador y a GitHub Pages a descargar el CSS corregido.
+
+Después:
+
+1. Abrir GitHub Desktop.
+2. Confirmar que aparezcan index.html y style.css.
+3. Crear el commit "Forzar nuevo color de portada".
+4. Presionar Push origin.
+5. Esperar unos minutos y volver a abrir la página.
+
+El texto debe mostrarse en marfil claro, no en café oscuro.
