@@ -5,7 +5,7 @@ reveals.forEach(el=>io.observe(el));
 
 // Snapshot V4.4 — Lightbox profesional para Portafolio Editorial
 (function(){
-  const items = Array.from(document.querySelectorAll('.portfolio-mosaic .mosaic-item'));
+  const items = Array.from(document.querySelectorAll('.signature-portfolio .mosaic-item[data-full]'));
   const lightbox = document.querySelector('.snapshot-lightbox');
   if(!items.length || !lightbox) return;
 
