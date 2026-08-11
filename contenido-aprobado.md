@@ -10,11 +10,11 @@ Snapshot comenzó como una propuesta entre dos amigos unidos por el gusto por la
 
 Hoy somos un equipo de profesionales especializados en documentar bodas. Héctor Jiménez dirige el área de fotografía y Antonio Reyes el área de video, acompañados por fotógrafos, camarógrafos y editoras que cuidan cada etapa de producción.
 
-Después de más de 400 bodas, seguimos trabajando con el mismo propósito: preservar el amor, la emoción y la forma en que vivieron uno de los días más importantes de su historia.
+Después de más de 300 bodas, seguimos trabajando con el mismo propósito: preservar el amor, la emoción y la forma en que vivieron uno de los días más importantes de su historia.
 
 ## Datos confirmados para desarrollar la redacción
 
-- Snapshot tiene 13 años realizando bodas y ha documentado más de 400.
+- Snapshot tiene 13 años realizando bodas y ha documentado más de 300.
 - Héctor Jiménez dirige el área de fotografía.
 - Antonio Reyes dirige el área de video.
 - Vanesa es editora de fotografía y fotógrafa.
