@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260811-10">
+  <link rel="stylesheet" href="style.css?v=20260811-11">
 </head>
 <body class="signature-body">
   <header class="signature-nav">
@@ -172,13 +172,55 @@
     </section>
 
     <section id="contacto" class="signature-contact">
-      <div class="reveal">
-        <p class="eyebrow dark">Agenda tu fecha</p>
-        <h2>Comencemos a contar su historia.</h2>
-        <p>Cada boda, cada XV años y cada familia empieza con una conversación.</p>
-        <a class="btn btn-dark" href="https://wa.me/522461718808?text=Hola%20Snapshot%20Fotograf%C3%ADa%2C%20vi%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20cotizar%20mi%20evento." onclick="gtag('event','click_whatsapp_contacto')">Enviar WhatsApp</a>
-        <div class="social-links"><a href="https://www.instagram.com/snapshot.foto/" target="_blank">Instagram</a><a href="https://www.facebook.com/snaps.fotografia/" target="_blank">Facebook</a><a href="https://www.youtube.com/@SnapshotFotograf%C3%ADa" target="_blank">YouTube</a></div>
+      <div class="contact-panel">
+        <div class="contact-intro reveal">
+          <div>
+            <p class="eyebrow">Su historia comienza aquí</p>
+            <h2>Conversemos sobre su boda.</h2>
+            <p>Cuéntennos la fecha, el lugar y cómo imaginan ese día. Les responderemos personalmente con la disponibilidad y la cobertura más adecuada.</p>
+          </div>
+          <div class="contact-investment">
+            <span>Coberturas desde</span>
+            <strong>$9,000 — $18,000 MXN</strong>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal">
+          <form id="availability-form">
+            <div class="contact-field contact-field-full">
+              <label for="contact-names">Nombres</label>
+              <input id="contact-names" name="names" type="text" placeholder="¿Cómo podemos dirigirnos a ustedes?" required>
+            </div>
+            <div class="contact-field">
+              <label for="contact-date">Fecha de la boda</label>
+              <input id="contact-date" name="date" type="date" required>
+            </div>
+            <div class="contact-field">
+              <label for="contact-place">Lugar</label>
+              <input id="contact-place" name="place" type="text" placeholder="Puebla, Tlaxcala…" required>
+            </div>
+            <div class="contact-field contact-field-full">
+              <label for="contact-service">Cobertura que les interesa</label>
+              <select id="contact-service" name="service">
+                <option>Fotografía y video</option>
+                <option>Fotografía</option>
+                <option>Video</option>
+                <option>Aún no lo sabemos</option>
+              </select>
+            </div>
+            <div class="contact-field contact-field-full">
+              <label for="contact-details">Cuéntennos un poco</label>
+              <textarea id="contact-details" name="details" placeholder="Tipo de ceremonia, locaciones o cualquier detalle importante"></textarea>
+            </div>
+            <div class="contact-actions">
+              <span>Respuesta personal por WhatsApp</span>
+              <button class="btn btn-dark" type="submit">Consultar disponibilidad</button>
+            </div>
+            <p class="contact-reservation">La fecha se reserva con contrato y un anticipo del 20% del paquete elegido.</p>
+          </form>
+        </div>
       </div>
+      <div class="social-links"><a href="https://www.instagram.com/snapshot.foto/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.facebook.com/snaps.fotografia/" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.youtube.com/@SnapshotFotograf%C3%ADa" target="_blank" rel="noopener noreferrer">YouTube</a></div>
     </section>
   </main>
   <a class="whatsapp" href="https://wa.me/522461718808?text=Hola%20Snapshot%20Fotograf%C3%ADa%2C%20vi%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20cotizar%20mi%20evento." onclick="gtag('event','click_whatsapp_floating')">WhatsApp</a>
@@ -191,6 +233,6 @@
     </figure>
     <button class="lightbox-next" type="button" aria-label="Imagen siguiente">›</button>
   </div>
-  <script src="script.js?v=20260811-2"></script>
+  <script src="script.js?v=20260811-3"></script>
 </body>
 </html>

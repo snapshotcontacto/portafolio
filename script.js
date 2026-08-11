@@ -56,3 +56,33 @@ reveals.forEach(el=>io.observe(el));
     if(e.key === 'ArrowLeft') prev();
   });
 })();
+
+// Consulta de disponibilidad: prepara la información y abre WhatsApp.
+(function(){
+  const form = document.querySelector('#availability-form');
+  if(!form) return;
+
+  form.addEventListener('submit', (event)=>{
+    event.preventDefault();
+    if(!form.reportValidity()) return;
+
+    const data = new FormData(form);
+    const rawDate = String(data.get('date') || '');
+    const date = rawDate
+      ? new Intl.DateTimeFormat('es-MX',{day:'2-digit',month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(`${rawDate}T00:00:00Z`))
+      : 'Por definir';
+    const details = String(data.get('details') || '').trim() || 'Sin detalles adicionales por ahora.';
+    const message = [
+      'Hola Snapshot Fotografía, queremos consultar la disponibilidad para nuestra boda.',
+      '',
+      `Nombres: ${String(data.get('names') || '').trim()}`,
+      `Fecha: ${date}`,
+      `Lugar: ${String(data.get('place') || '').trim()}`,
+      `Cobertura: ${String(data.get('service') || '').trim()}`,
+      `Detalles: ${details}`
+    ].join('\n');
+
+    if(typeof window.gtag === 'function') window.gtag('event','submit_disponibilidad_whatsapp');
+    window.location.href = `https://wa.me/522461718808?text=${encodeURIComponent(message)}`;
+  });
+})();
