@@ -650,3 +650,35 @@
   .contact-actions .btn{width:100%}
   .signature-contact>.social-links{justify-content:flex-start}
 }
+
+/* =========================================================
+   Tipografía interior — editorial clara y legible
+========================================================= */
+.portfolio-bento-head h2,
+.editorial-stories-head h2,
+.about-heading h2,
+.trust-heading h2,
+.trust-awards h2,
+.process-heading h2,
+.contact-intro h2{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-weight:600;
+  line-height:1.03;
+  letter-spacing:-.025em;
+}
+.portfolio-bento-head h2{font-size:clamp(2.65rem,4.6vw,5.15rem)}
+.editorial-stories-head h2{font-size:clamp(2.55rem,4.5vw,5rem);max-width:850px}
+.about-heading h2{font-size:clamp(3rem,5.1vw,5.6rem)}
+.trust-heading h2{font-size:clamp(2.55rem,4.5vw,5rem)}
+.trust-awards h2{font-size:clamp(2.3rem,4.1vw,4.55rem)}
+.process-heading h2{font-size:clamp(2.65rem,4.9vw,5.35rem)}
+.contact-intro h2{font-size:clamp(2.85rem,4.8vw,5.25rem);line-height:1}
+@media(max-width:560px){
+  .portfolio-bento-head h2,
+  .editorial-stories-head h2,
+  .about-heading h2,
+  .trust-heading h2,
+  .trust-awards h2,
+  .process-heading h2,
+  .contact-intro h2{line-height:1.06}
+}
