@@ -491,3 +491,62 @@
   .process-step{grid-template-columns:42px minmax(0,1fr);padding:20px 0}
   .process-step p{font-size:.84rem}
 }
+
+/* =========================================================
+   Portafolio de bodas — cuadrícula editorial de ocho imágenes
+========================================================= */
+.signature-portfolio{padding:110px 6vw 125px;background:#fff}
+.portfolio-bento-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:32px;
+  max-width:1360px;
+  margin:0 auto 32px;
+}
+.portfolio-bento-head h2{
+  margin:10px 0 0;
+  font-family:'Bodoni Moda',Georgia,serif;
+  font-size:clamp(2.8rem,5vw,5.6rem);
+  font-weight:400;
+  line-height:.98;
+  letter-spacing:-.035em;
+}
+.portfolio-bento-head>p{margin:0;color:#6a645b;font-size:.74rem;letter-spacing:.05em}
+.portfolio-bento{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  grid-auto-rows:205px;
+  grid-auto-flow:dense;
+  gap:10px;
+  max-width:1360px;
+  margin:auto;
+}
+.portfolio-bento .portfolio-bento-item{
+  position:relative;
+  min-width:0;
+  margin:0;
+  overflow:hidden;
+  background:#e5e0d7;
+  box-shadow:none;
+  cursor:zoom-in;
+}
+.portfolio-bento .portfolio-bento-item.item-wide{grid-column:span 2}
+.portfolio-bento .portfolio-bento-item.item-tall{grid-row:span 2}
+.portfolio-bento .portfolio-bento-item::after{display:none}
+.portfolio-bento .portfolio-bento-item>img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .45s ease,filter .45s ease;
+}
+.portfolio-bento .portfolio-bento-item:hover>img{transform:scale(1.025);filter:saturate(1.03) contrast(1.02)}
+@media(max-width:650px){
+  .signature-portfolio{padding:82px 5vw 92px}
+  .portfolio-bento-head{align-items:flex-start;flex-direction:column;gap:10px;margin-bottom:24px}
+  .portfolio-bento{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:165px;gap:8px}
+  .portfolio-bento .portfolio-bento-item{grid-column:auto;grid-row:auto}
+  .portfolio-bento .portfolio-bento-item.item-wide{grid-column:1/-1;min-height:205px}
+}
