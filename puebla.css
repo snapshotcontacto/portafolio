@@ -34,6 +34,20 @@
   .puebla-hero-copy h1 span:first-child{max-width:13ch;margin:auto}
 }
 
+/* Corrección móvil: evita que la historia destacada invada la siguiente fila */
+@media(max-width:820px){
+  .puebla-story-feature{
+    grid-row:span 2;
+    min-height:0;
+  }
+  .puebla-whatsapp{
+    right:12px;
+    bottom:12px;
+    padding:11px 14px;
+    font-size:.74rem;
+  }
+}
+
 /* Ajuste final: todo el título permanece dentro del cielo azul */
 .puebla-hero-copy{
   top:4.5%;
