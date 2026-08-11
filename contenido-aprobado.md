@@ -42,3 +42,23 @@ Después de más de 300 bodas, seguimos trabajando con el mismo propósito: pres
 - La ubicación se presentará como: “Puebla · Tlaxcala”.
 - Las acciones principales serán “Ver historias” y “Consultar disponibilidad”, con tratamiento discreto y centrado.
 - Las páginas de XV años permanecerán ocultas mientras se decide si se convierten en un proyecto independiente o se eliminan.
+
+## La experiencia Snapshot — versión aprobada
+
+### UN PROCESO CLARO PARA DISFRUTAR CADA MOMENTO.
+
+#### 01. CONVERSEMOS
+
+Conocemos su historia, la fecha, las locaciones y lo que desean conservar. Con esa información les ayudamos a elegir la cobertura adecuada.
+
+#### 02. PLANEAMOS
+
+Definimos horarios, recorridos y momentos importantes. También compartimos ideas de fotografías, locaciones y poses.
+
+#### 03. DOCUMENTAMOS
+
+Trabajamos con un plan y un equipo coordinado. Según el paquete, la cobertura puede incluir fotografía, video, dron y entre 7 y 10 horas de acompañamiento.
+
+#### 04. SELECCIONAN Y RECIBEN
+
+A las dos semanas enviamos las fotografías para selección. La entrega completa puede estar lista en cuatro semanas o hasta cinco durante temporada alta.
