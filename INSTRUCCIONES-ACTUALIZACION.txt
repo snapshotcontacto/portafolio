@@ -1,0 +1,20 @@
+ACTUALIZACIÓN DE PORTADA — SNAPSHOT FOTOGRAFÍA
+
+Archivos que deben sustituirse o agregarse en la raíz del repositorio:
+
+1. Sustituir index.html.
+2. Sustituir style.css.
+3. Agregar contenido-aprobado.md.
+4. Dentro de la carpeta signature-hero, agregar hero-escalera.webp.
+
+No es necesario eliminar las fotografías anteriores de signature-hero.
+
+Después de copiar los archivos:
+
+1. Abrir GitHub Desktop.
+2. Confirmar que aparezcan los cuatro cambios.
+3. Escribir un resumen de commit, por ejemplo: "Nueva portada y sección Nosotros".
+4. Presionar Commit to main.
+5. Presionar Push origin.
+
+La fotografía original no fue alterada. hero-escalera.webp es una copia optimizada de 2048 × 1365 px para mejorar la velocidad de carga.

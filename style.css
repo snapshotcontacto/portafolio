@@ -7,6 +7,9 @@
    Historias completas, mosaico limpio y lightbox premium
 ========================================================= */
 
+/* Historia del equipo */
+.signature-about{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(48px,8vw,130px);align-items:start;padding:120px 8vw;background:#fff;border-top:1px solid var(--line)}.about-heading{position:sticky;top:130px}.about-heading h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(3.2rem,5.5vw,6rem);font-weight:500;line-height:.92;letter-spacing:-.03em;margin:14px 0}.about-copy{max-width:720px}.about-copy>p{font-size:clamp(1rem,1.35vw,1.2rem);line-height:1.9;color:#4d4943;margin:0 0 24px}.about-facts{display:flex;gap:clamp(28px,5vw,72px);padding-top:26px;margin-top:38px;border-top:1px solid var(--line)}.about-facts span{max-width:180px;font-size:.72rem;line-height:1.6;letter-spacing:.1em;text-transform:uppercase;color:#625e57}.about-facts strong{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:3.2rem;font-weight:500;line-height:1;color:var(--ink);letter-spacing:-.03em}
+
 /* Historias alternadas más editoriales */
 .signature-stories{
   background:#f7f4ee;
@@ -141,8 +144,11 @@
 
 @media(max-width:1020px){
   .portfolio-mosaic{column-count:3;}
+  .signature-nav nav a:nth-child(5){display:none;}
 }
 @media(max-width:720px){
+  .signature-about{grid-template-columns:1fr;padding:82px 6vw;gap:34px}.about-heading{position:static}.about-facts{gap:24px}.about-facts strong{font-size:2.7rem}
+  .signature-nav nav a:nth-child(2),.signature-nav nav a:nth-child(3),.signature-nav nav a:nth-child(4),.signature-nav nav a:nth-child(5){display:none;}
   .signature-story{min-height:auto;}
   .story-photo{min-height:360px;}
   .portfolio-mosaic{column-count:1;padding:0 5vw;}
@@ -152,4 +158,92 @@
   .lightbox-close{top:16px;right:16px;width:42px;height:42px;}
   .snapshot-lightbox{padding:72px 16px 34px;}
   .snapshot-lightbox img{max-height:78vh;}
+}
+
+/* =========================================================
+   Portada aprobada — fotografía cenital y tipografía editorial
+========================================================= */
+.signature-hero-single{
+  position:relative;
+  min-height:100vh;
+  min-height:100svh;
+  overflow:hidden;
+  background:#1a100b;
+}
+.hero-single-photo{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+.signature-hero-single::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(16,9,5,.34) 0,transparent 17%,transparent 73%,rgba(16,9,5,.58) 100%);
+  pointer-events:none;
+}
+.hero-single-copy{
+  position:absolute;
+  z-index:2;
+  top:94px;
+  left:50%;
+  width:min(88%,850px);
+  transform:translateX(-50%);
+  color:#2b1b14;
+  text-align:center;
+}
+.hero-single-copy h1{
+  margin:0;
+  font-family:'Fraunces',Georgia,serif;
+  font-size:clamp(2.25rem,4.7vw,5rem);
+  font-style:italic;
+  font-weight:400;
+  line-height:1;
+  letter-spacing:-.035em;
+}
+.hero-single-copy p{
+  margin:8px 0 0;
+  font-family:'Montserrat',Arial,sans-serif;
+  font-size:.7rem;
+  font-weight:600;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+.hero-quiet-actions{
+  position:absolute;
+  z-index:3;
+  left:50%;
+  bottom:34px;
+  display:flex;
+  gap:28px;
+  transform:translateX(-50%);
+  white-space:nowrap;
+}
+.hero-quiet-actions a{
+  padding:0 4px 5px;
+  border-bottom:1px solid rgba(255,255,255,.7);
+  color:#fff;
+  font-size:.68rem;
+  font-weight:500;
+  letter-spacing:.06em;
+  text-decoration:none;
+  transition:border-color .25s ease,opacity .25s ease;
+}
+.hero-quiet-actions a:hover{
+  border-color:#fff;
+  opacity:.78;
+}
+.signature-hero-single .scroll-cue{
+  display:none;
+}
+@media(max-width:720px){
+  .hero-single-photo{object-position:center center;}
+  .hero-single-copy{top:82px;width:94%;}
+  .hero-single-copy h1{font-size:clamp(2.05rem,10vw,3.3rem);}
+  .hero-single-copy p{margin-top:6px;font-size:.62rem;letter-spacing:.16em;}
+  .hero-quiet-actions{bottom:28px;gap:18px;}
+  .hero-quiet-actions a{font-size:.62rem;}
 }
