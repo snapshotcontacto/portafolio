@@ -32,6 +32,8 @@ Después de más de 300 bodas, seguimos trabajando con el mismo propósito: pres
 - Se pueden atender hasta dos eventos por día con equipos de trabajo independientes y colaboradores externos de respaldo.
 - El rango actual de precios es de $9,000 a $18,000 MXN.
 - Snapshot es proveedor premium en Bodas.com.mx y ha recibido dos Wedding Awards.
+- El perfil de Bodas.com.mx muestra 5.0 de calificación, 33 opiniones y 100% de recomendación (consultado en agosto de 2026).
+- Los Wedding Awards corresponden a 2022 y 2024.
 - La prioridad comercial y de posicionamiento es Puebla, sin dejar de mencionar Tlaxcala.
 
 ## Decisiones de contenido y diseño vigentes

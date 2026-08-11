@@ -9,7 +9,7 @@
 
 /* Historia del equipo */
 .signature-about{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(48px,8vw,130px);align-items:start;padding:120px 8vw;background:#fff;border-top:1px solid var(--line)}.about-heading{position:sticky;top:130px}.about-heading h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(3.2rem,5.5vw,6rem);font-weight:500;line-height:.92;letter-spacing:-.03em;margin:14px 0}.about-copy{max-width:720px}.about-copy>p{font-size:clamp(1rem,1.35vw,1.2rem);line-height:1.9;color:#4d4943;margin:0 0 24px}.about-facts{display:flex;gap:clamp(28px,5vw,72px);padding-top:26px;margin-top:38px;border-top:1px solid var(--line)}.about-facts span{max-width:180px;font-size:.72rem;line-height:1.6;letter-spacing:.1em;text-transform:uppercase;color:#625e57}.about-facts strong{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:3.2rem;font-weight:500;line-height:1;color:var(--ink);letter-spacing:-.03em}
-.founders-grid{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(22px,4vw,58px);margin-top:clamp(8px,2vw,28px)}.founder-card{margin:0}.founder-card img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center;background:#e8e4dc;filter:saturate(.88);transition:filter .35s ease}.founder-card:hover img{filter:saturate(1)}.founder-card figcaption{display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding-top:18px;border-top:1px solid var(--line);margin-top:14px}.founder-card h3{margin:0;font-family:'Bodoni Moda',Georgia,serif;font-size:clamp(1.5rem,2.2vw,2.35rem);font-weight:400;letter-spacing:.02em;text-transform:uppercase}.founder-card figcaption p{margin:0;color:#6a645b;font-size:.68rem;font-weight:600;letter-spacing:.12em;text-align:right;text-transform:uppercase}
+.founders-grid{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(22px,4vw,58px);margin-top:clamp(8px,2vw,28px)}.founder-card{margin:0}.founder-card img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center;background:#e8e4dc;filter:saturate(.88);transition:filter .35s ease}.founder-card:hover img{filter:saturate(1)}.founder-card figcaption{display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding-top:18px;border-top:1px solid var(--line);margin-top:14px}.founder-card h3{margin:0;font-family:'Bodoni Moda',Georgia,serif;font-size:clamp(1.5rem,2.2vw,2.35rem);font-weight:400;letter-spacing:.02em;text-transform:uppercase}.founder-card figcaption p{margin:0;color:#6a645b;font-size:.68rem;font-weight:600;letter-spacing:.12em;text-align:right;text-transform:uppercase}
 
 /* Historias alternadas más editoriales */
 .signature-stories{
@@ -149,7 +149,7 @@
 }
 @media(max-width:720px){
   .signature-about{grid-template-columns:1fr;padding:82px 6vw;gap:34px}.about-heading{position:static}.about-facts{gap:24px}.about-facts strong{font-size:2.7rem}
-  .founders-grid{grid-template-columns:1fr;gap:42px;margin-top:4px}.founder-card figcaption{align-items:flex-start;flex-direction:column;gap:6px}.founder-card figcaption p{text-align:left}
+  .founders-grid{grid-template-columns:1fr;gap:42px;margin-top:4px}.founder-card img{aspect-ratio:4/3}.founder-card figcaption{align-items:flex-start;flex-direction:column;gap:6px}.founder-card figcaption p{text-align:left}
   .signature-nav nav a:nth-child(2),.signature-nav nav a:nth-child(3),.signature-nav nav a:nth-child(4),.signature-nav nav a:nth-child(5){display:none;}
   .signature-story{min-height:auto;}
   .story-photo{min-height:360px;}
@@ -251,4 +251,99 @@
   .hero-single-copy p{margin-top:5px;font-size:.64rem;letter-spacing:.15em;}
   .hero-quiet-actions{bottom:28px;gap:18px;}
   .hero-quiet-actions a{font-size:.62rem;}
+}
+
+/* =========================================================
+   Opiniones verificadas y Wedding Awards
+========================================================= */
+.signature-trust{
+  padding:clamp(88px,10vw,150px) 7vw;
+  background:#f1eee7;
+}
+.trust-heading{
+  display:grid;
+  grid-template-columns:minmax(0,1.2fr) minmax(250px,.8fr);
+  gap:clamp(42px,8vw,120px);
+  align-items:end;
+  max-width:1360px;
+  margin:0 auto 58px;
+}
+.trust-heading h2,
+.trust-awards h2{
+  margin:12px 0 0;
+  font-family:'Bodoni Moda',Georgia,serif;
+  font-size:clamp(2.7rem,5vw,5.5rem);
+  font-weight:400;
+  line-height:.98;
+  letter-spacing:-.035em;
+}
+.trust-rating{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:2px 16px;
+  align-items:baseline;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+}
+.trust-rating p{
+  grid-column:1/-1;
+  margin:0;
+  color:#6a645b;
+  font-size:.7rem;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.trust-rating strong{
+  font-family:'Bodoni Moda',Georgia,serif;
+  font-size:clamp(3.2rem,6vw,6rem);
+  font-weight:400;
+  line-height:1;
+}
+.trust-rating span{color:#6a645b;font-size:.78rem;line-height:1.6}
+.trust-reviews{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  max-width:1360px;
+  margin:0 auto;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.trust-reviews blockquote{
+  margin:0;
+  padding:34px clamp(22px,3vw,42px) 36px;
+  border-left:1px solid var(--line);
+}
+.trust-reviews blockquote:first-child{border-left:0}
+.trust-reviews blockquote p{
+  min-height:3.2em;
+  margin:0 0 26px;
+  font-family:'Bodoni Moda',Georgia,serif;
+  font-size:clamp(1.35rem,2vw,2rem);
+  line-height:1.25;
+}
+.trust-reviews footer{display:flex;justify-content:space-between;gap:16px;color:#6a645b;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.trust-awards{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:clamp(42px,8vw,110px);
+  align-items:center;
+  max-width:1360px;
+  margin:70px auto 0;
+}
+.trust-awards>div:first-child{max-width:790px}
+.trust-awards h2{font-size:clamp(2.4rem,4.5vw,4.9rem)}
+.trust-awards>div:first-child>p:not(.eyebrow){margin:22px 0 0;color:#625e57;line-height:1.8}
+.trust-badges{display:flex;align-items:center;gap:18px}
+.trust-badges img{width:clamp(108px,12vw,168px);height:auto}
+@media(max-width:780px){
+  .signature-trust{padding:82px 6vw}
+  .trust-heading,.trust-awards{grid-template-columns:1fr}
+  .trust-heading{gap:34px;margin-bottom:42px}
+  .trust-reviews{grid-template-columns:1fr}
+  .trust-reviews blockquote{border-left:0;border-top:1px solid var(--line)}
+  .trust-reviews blockquote:first-child{border-top:0}
+  .trust-reviews blockquote p{min-height:auto}
+  .trust-awards{gap:34px;margin-top:54px}
+  .trust-badges{justify-content:flex-start}
 }
