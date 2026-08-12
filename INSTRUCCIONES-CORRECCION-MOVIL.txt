@@ -1,0 +1,11 @@
+CORRECCIÓN DE LA FOTOGRAFÍA PRINCIPAL EN MÓVIL
+
+1. Sustituye index.html en la carpeta principal del repositorio.
+2. Abre la carpeta signature-hero.
+3. Copia dentro de ella hero-escalera-mobile.webp.
+4. Verifica que queden juntos estos dos archivos:
+   signature-hero/hero-escalera.webp
+   signature-hero/hero-escalera-mobile.webp
+5. Haz commit y push en GitHub Desktop.
+
+No borres la fotografía principal hero-escalera.webp.
