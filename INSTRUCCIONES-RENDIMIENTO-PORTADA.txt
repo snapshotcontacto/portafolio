@@ -1,0 +1,24 @@
+OPTIMIZACIÓN DE RENDIMIENTO — PORTADA PRINCIPAL
+
+Sustituye:
+
+1. index.html
+2. style.css
+3. Las carpetas signature-portfolio e historias-covers incluidas.
+4. Copia la nueva carpeta signature-hero/mobile sin eliminar la fotografía
+   original que ya existe en signature-hero.
+
+En GitHub Desktop escribe: "Mejorar velocidad móvil de la portada".
+Después presiona Commit to main y Push origin.
+
+CAMBIOS REALIZADOS
+
+- Portada móvil reducida de 185 KB a 56 KB.
+- Precarga de la imagen principal correcta para cada pantalla.
+- Google Fonts deja de bloquear el primer renderizado.
+- Estilos esenciales del primer pantallazo incluidos en index.html.
+- Miniaturas del portafolio e historias comprimidas y redimensionadas.
+- Dimensiones explícitas añadidas al logotipo.
+
+Después de publicar, espera aproximadamente 10 minutos por la caché de GitHub
+Pages y repite PageSpeed Insights dos veces en modo Celulares.
