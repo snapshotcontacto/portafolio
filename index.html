@@ -19,6 +19,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Snapshot Fotografía">
   <meta property="og:locale" content="es_MX">
+  <link rel="preload" as="image" href="signature-hero/hero-escalera.webp" imagesrcset="signature-hero/hero-escalera-mobile.webp 900w, signature-hero/hero-escalera.webp 2048w" imagesizes="100vw" fetchpriority="high">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -57,12 +58,14 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260811-13">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+  <style>.signature-hero-single{position:relative;min-height:100vh;overflow:hidden;background:#171512}.hero-single-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.hero-single-copy{position:absolute;z-index:2;bottom:96px;left:50%;width:min(86%,700px);transform:translateX(-50%);color:#fff;text-align:center}.hero-single-copy h1{margin:0;font-family:Georgia,serif;font-size:clamp(1.8rem,3.3vw,3.25rem);font-weight:400;line-height:1;letter-spacing:.035em;text-transform:uppercase}.hero-single-copy p{margin:5px 0 0;font-family:Arial,sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase}@media(max-width:720px){.hero-single-copy{bottom:102px;width:90%}.hero-single-copy h1{font-size:clamp(1.75rem,8vw,2.7rem)}}</style>
+  <link rel="stylesheet" href="style.css?v=20260812-2">
 </head>
 <body class="signature-body">
   <header class="signature-nav">
-    <a href="#inicio" class="signature-logo"><img src="Logo.png" alt="Snapshot Fotografía"></a>
+    <a href="#inicio" class="signature-logo"><img src="Logo.png" width="1202" height="299" alt="Snapshot Fotografía"></a>
     <nav>
       <a href="#portafolio">Portafolio</a>
       <a href="#historias">Historias</a>
@@ -74,7 +77,10 @@
 
   <main>
     <section id="inicio" class="signature-hero-single">
-      <img class="hero-single-photo" src="signature-hero/hero-escalera.webp" width="2048" height="1365" alt="Novios vistos desde lo alto de una escalera durante su boda" fetchpriority="high">
+      <picture>
+        <source media="(max-width:720px)" srcset="signature-hero/hero-escalera-mobile.webp" width="900" height="600">
+        <img class="hero-single-photo" src="signature-hero/hero-escalera.webp" width="2048" height="1365" alt="Novios vistos desde lo alto de una escalera durante su boda" fetchpriority="high" decoding="async">
+      </picture>
       <div class="hero-single-copy">
         <h1>Fotografía y video de bodas</h1>
         <p>Puebla · Tlaxcala</p>
@@ -200,6 +206,26 @@
           <li class="process-step reveal"><span>03</span><div><h3>Documentamos</h3><p>Trabajamos con un plan y un equipo coordinado. Según el paquete, la cobertura puede incluir fotografía, video, dron y entre 7 y 10 horas de acompañamiento.</p></div></li>
           <li class="process-step reveal"><span>04</span><div><h3>Seleccionan y reciben</h3><p>A las dos semanas enviamos las fotografías para selección. La entrega completa puede estar lista en cuatro semanas o hasta cinco durante temporada alta.</p></div></li>
         </ol>
+      </div>
+    </section>
+
+    <section class="signature-locations" aria-labelledby="locations-title">
+      <div class="locations-copy reveal">
+        <p class="eyebrow dark">Cobertura regional</p>
+        <h2 id="locations-title">Fotografía de bodas en Puebla y Tlaxcala.</h2>
+        <p>Documentamos bodas en Puebla, Cholula, Tlaxcala y distintas localidades de la región. Conocemos haciendas, iglesias y espacios para celebraciones, y adaptamos cada cobertura a los tiempos y características de cada boda.</p>
+      </div>
+      <div class="locations-links reveal">
+        <a class="location-link" href="fotografo-bodas-puebla.html">
+          <span>Destino principal</span>
+          <strong>Bodas en Puebla</strong>
+          <small>Conocer cobertura →</small>
+        </a>
+        <div class="location-link location-link-pending" aria-label="Próximamente: bodas en Tlaxcala">
+          <span>Cobertura regional</span>
+          <strong>Bodas en Tlaxcala</strong>
+          <small>Página en preparación</small>
+        </div>
       </div>
     </section>
 

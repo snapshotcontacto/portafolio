@@ -651,6 +651,54 @@
   .signature-contact>.social-links{justify-content:flex-start}
 }
 
+/* =========================================================
+   Cobertura local — enlaces SEO para Puebla y Tlaxcala
+========================================================= */
+.signature-locations{
+  padding:110px 7vw;
+  background:#e8e0d2;
+  display:grid;
+  grid-template-columns:minmax(0,.9fr) minmax(520px,1.1fr);
+  gap:clamp(48px,8vw,130px);
+  align-items:end;
+}
+.locations-copy{max-width:670px}
+.locations-copy h2{
+  margin:12px 0 24px;
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:clamp(2.8rem,4.8vw,5.4rem);
+  font-weight:600;
+  line-height:1.02;
+  letter-spacing:-.025em;
+}
+.locations-copy>p:last-child{margin:0;color:#5d574e;line-height:1.85}
+.locations-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid #bdb2a2}
+.location-link{
+  min-height:230px;
+  padding:30px 28px;
+  border-right:1px solid #bdb2a2;
+  border-bottom:1px solid #bdb2a2;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  color:#171512;
+  text-decoration:none;
+  transition:background .3s ease,color .3s ease;
+}
+.location-link:first-child{border-left:1px solid #bdb2a2}
+a.location-link:hover{background:#171512;color:#fff}
+.location-link span,.location-link small{text-transform:uppercase;letter-spacing:.15em;font-size:.63rem;font-weight:700}
+.location-link strong{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2rem,3vw,3.2rem);font-weight:600;line-height:1}
+.location-link-pending{color:#756e64}
+@media(max-width:960px){
+  .signature-locations{grid-template-columns:1fr;align-items:start}
+}
+@media(max-width:560px){
+  .signature-locations{padding:78px 6vw;gap:42px}
+  .locations-links{grid-template-columns:1fr}
+  .location-link{min-height:185px;border-left:1px solid #bdb2a2}
+}
+
 /* Corrección móvil: las piezas altas reservan su espacio en la cuadrícula */
 @media(max-width:650px){
   .portfolio-bento .portfolio-bento-item.item-wide{
