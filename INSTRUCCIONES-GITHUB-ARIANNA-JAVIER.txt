@@ -1,0 +1,19 @@
+ACTUALIZACION: ARIANNA Y JAVIER
+
+1. Descomprime el ZIP.
+2. En GitHub abre el repositorio de snapshotfotografia.com.mx.
+3. Selecciona Add file > Upload files.
+4. Arrastra el contenido de la carpeta snapshot-arianna-javier-update.
+5. Confirma que GitHub conserve la carpeta arianna-javier.
+6. Pulsa Commit changes.
+
+SE SUSTITUYEN
+- historia-arianna-javier.html
+- sitemap.xml
+
+SE AGREGAN
+- arianna-javier/arianna-javier-01.webp a arianna-javier-20.webp
+- arianna-javier/arianna-javier-hero.webp
+- arianna-javier/arianna-javier-video.webp
+
+No es necesario borrar las fotografías JPG existentes.
