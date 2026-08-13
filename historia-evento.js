@@ -6,14 +6,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const close = lightbox?.querySelector('.lightbox-close');
   const previous = lightbox?.querySelector('.lightbox-prev');
   const next = lightbox?.querySelector('.lightbox-next');
-  if (!lightbox || !image || !caption || !images.length) return;
+  if (!lightbox || !image || !images.length) return;
+
+  if (caption) {
+    caption.textContent = '';
+    caption.hidden = true;
+  }
 
   let current = 0;
   const show = index => {
     current = (index + images.length) % images.length;
     image.src = images[current].currentSrc || images[current].src;
     image.alt = images[current].alt;
-    caption.textContent = images[current].alt;
     lightbox.classList.add('open');
     lightbox.setAttribute('aria-hidden', 'false');
     document.body.classList.add('lightbox-active');
