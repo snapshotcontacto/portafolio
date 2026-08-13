@@ -23,6 +23,7 @@ body.editorial-story {
   color: var(--story-ink);
   font-family: "Montserrat", Arial, sans-serif;
 }
+body.lightbox-active { overflow: hidden !important; }
 
 .editorial-story img { display: block; max-width: 100%; }
 .editorial-story a { color: inherit; }
@@ -314,6 +315,51 @@ body.editorial-story {
 }
 .story-footer a { text-decoration: none; }
 
+.story-related {
+  padding: clamp(75px, 9vw, 135px) clamp(22px, 6vw, 100px);
+  color: #fff;
+  background: #171411;
+}
+.story-related-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 42px;
+}
+.story-related h2 {
+  max-width: 780px;
+  margin: 12px 0 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(3rem, 5.4vw, 6rem);
+  font-weight: 500;
+  line-height: .9;
+}
+.story-related-all {
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255,255,255,.7);
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.story-related-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+.story-related-card {
+  position: relative;
+  min-height: 280px;
+  overflow: hidden;
+  color: #fff;
+  background: #2b2723;
+  text-decoration: none;
+}
+.story-related-card img { width: 100%; height: 100%; min-height: 280px; object-fit: cover; transition: transform .55s ease; }
+.story-related-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg,rgba(8,6,5,.8),transparent 65%); }
+.story-related-card div { position: absolute; z-index: 2; right: 0; bottom: 0; left: 0; padding: 24px; }
+.story-related-card h3 { margin: 0; font-family: "Cormorant Garamond",Georgia,serif; font-size: 2rem; font-weight: 500; }
+.story-related-card p { margin: 4px 0 0; font-size: .62rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.story-related-card:hover img { transform: scale(1.035); }
+
 .lightbox {
   display: none;
   position: fixed;
@@ -369,6 +415,11 @@ body.editorial-story {
   .story-location-copy, .story-seo { padding: 75px 24px; }
   .story-cta { min-height: 70svh; }
   .story-footer { display: block; line-height: 1.8; }
+  .story-related-head { display: block; }
+  .story-related-all { display: inline-block; margin-top: 25px; }
+  .story-related-grid { grid-template-columns: 1fr; }
+  .story-related-card { min-height: 230px; }
+  .story-related-card img { min-height: 230px; }
   .lightbox-prev, .lightbox-next { display: none; }
 }
 
