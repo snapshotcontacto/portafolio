@@ -416,6 +416,7 @@ body.lightbox-active { overflow: hidden !important; }
   .tile-tall, .tile-square { grid-column: span 1; grid-row: auto; aspect-ratio: 2 / 3; }
   .tile-feature { grid-column: span 2; grid-row: auto; aspect-ratio: 4 / 5; }
   .tile-final { grid-column: span 2; grid-row: auto; aspect-ratio: 3 / 2; }
+  .tile-tall.tile-final { aspect-ratio: 4 / 5; }
   .story-location-image { min-height: 65svh; }
   .story-location-copy, .story-seo { padding: 75px 24px; }
   .story-cta { min-height: 70svh; }
