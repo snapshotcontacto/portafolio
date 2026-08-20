@@ -1,4 +1,296 @@
-<!doctype html><html lang="es-MX"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Publicador de Historias | Snapshot Fotografía</title><link rel="stylesheet" href="styles.css"></head><body><header><div class="brand"><b>SF</b><span><strong>Snapshot Fotografía</strong><small>Publicador de historias</small></span></div><span id="connection">Comprobando archivos del sitio…</span></header><section class="hero"><p>Herramienta editorial interna</p><h1>Nueva historia de boda</h1><span>Completa los datos, ordena las imágenes y descarga un ZIP listo para GitHub.</span></section><nav><button class="active" data-step="1">01 Datos</button><button data-step="2">02 Fotografías</button><button data-step="3">03 Revisar y publicar</button></nav><form id="publisher">
-<section class="panel active" data-panel="1"><div class="heading"><i>01</i><div><h2>Datos de la historia</h2><p>Los campos alimentan la página, el SEO y los datos estructurados.</p></div></div><div class="grid"><label class="full">Pareja<input name="names" placeholder="Carlos y Elizabeth" required></label><label>Región<select name="region"><option value="puebla">Puebla</option><option value="tlaxcala">Tlaxcala</option></select></label><label>Fecha del evento<input name="eventDate" placeholder="Marzo de 2026" required></label><label class="full">Ubicación principal<input name="place" placeholder="Capilla del Rosario · Hacienda Real Puebla" required></label><label>Cobertura<input name="coverage" value="Fotografía, video y dron"></label><label>ID de YouTube<input name="youtube" placeholder="qhQJLnc8ix8"></label><label>Fecha de publicación<input name="publishDate" type="date" required></label><label class="full">Título SEO<input name="title" placeholder="Boda en… | Nombres" required></label><label class="full">Descripción SEO <small>Máximo 160 caracteres</small><textarea name="description" maxlength="160" required></textarea></label><label class="full">Headline estructurado<input name="headline" placeholder="Boda de…" required></label><label class="full">Frase sobre la portada<input name="eyebrow" placeholder="Una boda inolvidable en Puebla" required></label><label class="full">Título de introducción<input name="introTitle" required></label><label class="full">Primer párrafo<textarea name="p1" required></textarea></label><label class="full">Segundo párrafo<textarea name="p2" required></textarea></label><label class="full">Título de galería<input name="galleryTitle" required></label><label class="full">Título de ubicación<input name="locationTitle" required></label><label class="full">Texto de ubicación y celebración<textarea name="locationText" required></textarea></label></div><div class="actions"><span id="url-preview">historia-nombres.html</span><button type="button" data-next="2">Continuar</button></div></section>
-<section class="panel" data-panel="2"><div class="heading"><i>02</i><div><h2>Fotografías</h2><p>Se convierten a WebP y se renombran automáticamente.</p></div></div><div class="uploads"><label class="drop">Portada<input id="cover" type="file" accept="image/*" required><strong>Seleccionar portada</strong><small>Horizontal · mínimo recomendado 1800 px</small></label><label class="drop">Póster del teaser<input id="poster" type="file" accept="image/*"><strong>Seleccionar imagen</strong><small>Opcional · formato 16:9</small></label><label class="drop full">Galería<input id="gallery" type="file" accept="image/*" multiple required><strong>Agregar fotografías</strong><small id="gallery-count">0 seleccionadas · máximo 40</small></label></div><div id="photos" class="photos"></div><div class="actions"><button type="button" class="secondary" data-next="1">Volver</button><button type="button" data-next="3">Continuar</button></div></section>
-<section class="panel" data-panel="3"><div class="heading"><i>03</i><div><h2>Revisar y publicar</h2><p>Los archivos actuales se cargan automáticamente desde snapshotfotografia.com.mx.</p></div></div><div class="summary"><article><span>Página nueva</span><strong id="sum-page">Pendiente</strong></article><article><span>Fotografías</span><strong id="sum-images">0</strong></article><article><span>Página local</span><strong id="sum-local">Puebla</strong></article><article><span>Archivos adicionales</span><strong>Historias + sitemap</strong></article></div><aside><b>El ZIP incluirá</b><span>La página nueva, imágenes WebP, página local actualizada, archivo de historias y sitemap.</span></aside><div class="actions"><button type="button" class="secondary" data-next="2">Volver</button><button id="generate" type="submit">Generar ZIP</button></div><p id="message" role="status"></p></section></form><footer>Snapshot Fotografía · Herramienta interna</footer><script src="app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L2M4QM5JKR"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L2M4QM5JKR');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/favicon-48.png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#171512">
+  <title>Fotógrafo de bodas en Puebla | Snapshot Fotografía</title>
+  <meta name="description" content="Fotografía y video de bodas en Puebla y Tlaxcala con una mirada elegante, natural y cinematográfica. Conoce historias reales y consulta tu fecha.">
+  <link rel="canonical" href="https://www.snapshotfotografia.com.mx/">
+  <meta property="og:title" content="Fotógrafo de bodas en Puebla | Snapshot Fotografía">
+  <meta property="og:description" content="Fotografía y video de bodas en Puebla y Tlaxcala con una mirada elegante, natural y cinematográfica.">
+  <meta property="og:image" content="https://www.snapshotfotografia.com.mx/signature-hero/hero-escalera.webp">
+  <meta property="og:url" content="https://www.snapshotfotografia.com.mx/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Snapshot Fotografía">
+  <meta property="og:locale" content="es_MX">
+  <link rel="preload" as="image" href="signature-hero/hero-escalera.webp" imagesrcset="signature-hero/hero-escalera-mobile.webp 900w, signature-hero/hero-escalera.webp 2048w" imagesizes="100vw" fetchpriority="high">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "ProfessionalService"],
+    "@id": "https://www.snapshotfotografia.com.mx/#negocio",
+    "name": "Snapshot Fotografía",
+    "url": "https://www.snapshotfotografia.com.mx/",
+    "logo": "https://www.snapshotfotografia.com.mx/Logo.png",
+    "image": "https://www.snapshotfotografia.com.mx/signature-hero/hero-escalera.webp",
+    "telephone": "+52 246 171 8808",
+    "priceRange": "$9,000–$18,000 MXN",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Carretera Federal Tlaxcala-Texmelucan 1",
+      "addressLocality": "Santa Justina Ecatepec",
+      "addressRegion": "Tlaxcala",
+      "postalCode": "90123",
+      "addressCountry": "MX"
+    },
+    "areaServed": [
+      {"@type": "AdministrativeArea", "name": "Puebla"},
+      {"@type": "AdministrativeArea", "name": "Tlaxcala"}
+    ],
+    "sameAs": [
+      "https://maps.app.goo.gl/FXCKqPtYybzJXvnn8",
+      "https://www.instagram.com/snapshot.foto/",
+      "https://www.facebook.com/snaps.fotografia/",
+      "https://www.youtube.com/@SnapshotFotograf%C3%ADa",
+      "https://www.bodas.com.mx/fotografos-de-bodas/snapshot-fotografia--e230783"
+    ],
+    "founder": [
+      {"@type": "Person", "name": "Héctor Jiménez"},
+      {"@type": "Person", "name": "Antonio Reyes"}
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+  <style>.signature-hero-single{position:relative;min-height:100vh;overflow:hidden;background:#171512}.hero-single-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.hero-single-copy{position:absolute;z-index:2;bottom:96px;left:50%;width:min(86%,700px);transform:translateX(-50%);color:#fff;text-align:center}.hero-single-copy h1{margin:0;font-family:Georgia,serif;font-size:clamp(1.8rem,3.3vw,3.25rem);font-weight:400;line-height:1;letter-spacing:.035em;text-transform:uppercase}.hero-single-copy p{margin:5px 0 0;font-family:Arial,sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase}@media(max-width:720px){.hero-single-copy{bottom:102px;width:90%}.hero-single-copy h1{font-size:clamp(1.75rem,8vw,2.7rem)}}</style>
+  <link rel="stylesheet" href="style.css?v=20260812-2">
+</head>
+<body class="signature-body">
+  <header class="signature-nav">
+    <a href="#inicio" class="signature-logo"><img src="Logo.png" width="1202" height="299" alt="Snapshot Fotografía"></a>
+    <nav>
+      <a href="#portafolio">Portafolio</a>
+      <a href="#historias">Historias</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="signature-hero-single">
+      <picture>
+        <source media="(max-width:720px)" srcset="signature-hero/hero-escalera-mobile.webp" width="900" height="600">
+        <img class="hero-single-photo" src="signature-hero/hero-escalera.webp" width="2048" height="1365" alt="Novios vistos desde lo alto de una escalera durante su boda" fetchpriority="high" decoding="async">
+      </picture>
+      <div class="hero-single-copy">
+        <h1>Fotografía y video de bodas</h1>
+        <p>Puebla · Tlaxcala</p>
+      </div>
+      <div class="hero-quiet-actions">
+        <a href="#historias">Ver historias</a>
+        <a href="https://wa.me/522461718808?text=Hola%20Snapshot%20Fotograf%C3%ADa%2C%20vi%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20consultar%20la%20disponibilidad%20de%20mi%20fecha." onclick="gtag('event','click_whatsapp_hero')">Consultar disponibilidad</a>
+      </div>
+      <a class="scroll-cue" href="#historias" aria-label="Bajar"><span></span></a>
+    </section>
+
+    <section id="portafolio" class="signature-portfolio">
+      <div class="portfolio-bento-head reveal">
+        <div><p class="eyebrow dark">Portafolio de bodas</p><h2>Momentos irrepetibles.</h2></div>
+        <p>Fotografía · Video · Celebraciones reales</p>
+      </div>
+      <div class="portfolio-bento">
+        <figure class="mosaic-item portfolio-bento-item item-wide reveal" data-full="signature-portfolio/port-02.jpg" data-title="Novios celebrando entre humo de color" tabindex="0" role="button" aria-label="Abrir imagen: novios celebrando entre humo de color"><img src="signature-portfolio/port-02-thumb.webp" width="900" height="600" alt="Novios celebrando entre humo de color" loading="lazy"></figure>
+        <figure class="mosaic-item portfolio-bento-item reveal" data-full="signature-portfolio/port-03.jpg" data-title="Arquitectura interior de una iglesia durante una boda" tabindex="0" role="button" aria-label="Abrir imagen: arquitectura interior de una iglesia durante una boda"><img src="signature-portfolio/port-03-thumb.webp" width="900" height="600" alt="Arquitectura interior de una iglesia durante una boda" loading="lazy"></figure>
+        <figure class="mosaic-item portfolio-bento-item item-tall reveal" data-full="signature-portfolio/port-04.jpg" data-title="Novia caminando por un corredor de arquitectura contemporánea" tabindex="0" role="button" aria-label="Abrir imagen: novia caminando por un corredor de arquitectura contemporánea"><img src="signature-portfolio/port-04-thumb.webp" width="900" height="600" alt="Novia caminando por un corredor de arquitectura contemporánea" loading="lazy"></figure>
+        <figure class="mosaic-item portfolio-bento-item reveal" data-full="signature-portfolio/port-06.jpg" data-title="Pareja recorriendo el pasillo de una celebración al aire libre" tabindex="0" role="button" aria-label="Abrir imagen: pareja recorriendo el pasillo de una celebración al aire libre"><img src="signature-portfolio/port-06-thumb.webp" width="900" height="600" alt="Pareja recorriendo el pasillo de una celebración al aire libre" loading="lazy"></figure>
+        <figure class="mosaic-item portfolio-bento-item item-tall reveal" data-full="signature-portfolio/port-07.jpg" data-title="Abrazo emotivo durante la recepción en blanco y negro" tabindex="0" role="button" aria-label="Abrir imagen: abrazo emotivo durante la recepción en blanco y negro"><img src="signature-portfolio/port-07-thumb.webp" width="600" height="900" alt="Abrazo emotivo durante la recepción en blanco y negro" loading="lazy"></figure>
+        <figure class="mosaic-item portfolio-bento-item reveal" data-full="signature-portfolio/port-09.jpg" data-title="Retrato de novios frente a un paisaje abierto" tabindex="0" role="button" aria-label="Abrir imagen: retrato de novios frente a un paisaje abierto"><img src="signature-portfolio/port-09-thumb.webp" width="900" height="600" alt="Retrato de novios frente a un paisaje abierto" loading="lazy"></figure>
+        <figure class="mosaic-item portfolio-bento-item reveal" data-full="signature-portfolio/port-11.jpg" data-title="Retrato de pareja en una escalera de arquitectura histórica" tabindex="0" role="button" aria-label="Abrir imagen: retrato de pareja en una escalera de arquitectura histórica"><img src="signature-portfolio/port-11-thumb.webp" width="600" height="900" alt="Retrato de pareja en una escalera de arquitectura histórica" loading="lazy"></figure>
+        <figure class="mosaic-item portfolio-bento-item item-wide reveal" data-full="signature-portfolio/port-13.jpg" data-title="Momento íntimo de los novios dentro de un automóvil" tabindex="0" role="button" aria-label="Abrir imagen: momento íntimo de los novios dentro de un automóvil"><img src="signature-portfolio/port-13-thumb.webp" width="900" height="600" alt="Momento íntimo de los novios dentro de un automóvil" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <section id="historias" class="signature-stories">
+      <div class="editorial-stories-head reveal">
+        <div><p class="eyebrow dark">Historias destacadas</p><h2>Bodas reales. Recuerdos que permanecen.</h2></div>
+        <a class="editorial-all-link" href="historias-de-boda.html">Ver todas las historias</a>
+      </div>
+      <div class="editorial-stories-grid">
+        <a class="editorial-story editorial-story-feature reveal" href="boda-nancy-alfredo.html">
+          <img src="historias-covers/nancy-alfredo-cover.webp" width="1000" height="666" alt="Nancy y Alfredo frente a una puerta cubierta de vegetación" loading="lazy">
+          <div><h3>Nancy &amp; Alfredo</h3><p>Hacienda Amalucan · Puebla</p></div>
+        </a>
+        <div class="editorial-story-support">
+          <a class="editorial-story reveal" href="historia-angel-mildred.html">
+            <img src="historias-covers/angel-mildred-cover.webp" width="667" height="1000" alt="Ángel y Mildred durante su boda" loading="lazy">
+            <div><h3>Ángel &amp; Mildred</h3><p>Puebla · Cholula</p></div>
+          </a>
+          <a class="editorial-story reveal" href="historia-gina-josue.html">
+            <img src="historias-covers/gina-josue-cover.webp" width="1000" height="666" alt="Gina y Josué junto a un automóvil clásico" loading="lazy">
+            <div><h3>Gina &amp; Josué</h3><p>Cholula · Puebla</p></div>
+          </a>
+          <a class="editorial-story reveal" href="historia-diana-julio.html">
+            <img src="historias-covers/diana-julio-cover.webp" width="750" height="1000" alt="Diana y Julio con su hijo durante su boda" loading="lazy">
+            <div><h3>Diana &amp; Julio</h3><p>Salón Puertagua · Puebla</p></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros" class="signature-about">
+      <div class="about-heading reveal">
+        <p class="eyebrow dark">Nuestra historia</p>
+        <h2>Dos amigos.<br>Una mirada compartida.</h2>
+      </div>
+      <div class="about-copy reveal">
+        <p>Snapshot comenzó como una propuesta entre dos amigos unidos por el gusto por la fotografía.</p>
+        <p>Hoy somos un equipo de profesionales especializados en documentar bodas. Héctor Jiménez dirige el área de fotografía y Antonio Reyes el área de video, acompañados por fotógrafos, camarógrafos y editoras que cuidan cada etapa de producción.</p>
+        <p>Después de más de 300 bodas, seguimos trabajando con el mismo propósito: preservar el amor, la emoción y la forma en que vivieron uno de los días más importantes de su historia.</p>
+        <div class="about-facts" aria-label="Experiencia de Snapshot Fotografía">
+          <span><strong>13</strong> años documentando bodas</span>
+          <span><strong>+300</strong> bodas fotografiadas</span>
+        </div>
+      </div>
+      <div class="founders-grid">
+        <figure class="founder-card reveal">
+          <img src="assets/equipo/hector-jimenez.webp" width="1200" height="900" alt="Héctor Jiménez trabajando con su cámara" loading="lazy">
+          <figcaption><h3>Héctor Jiménez</h3><p>Dirección de fotografía</p></figcaption>
+        </figure>
+        <figure class="founder-card reveal">
+          <img src="assets/equipo/antonio-reyes.webp" width="1200" height="900" alt="Antonio Reyes preparando un dron para una cobertura" loading="lazy">
+          <figcaption><h3>Antonio Reyes</h3><p>Dirección de video</p></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="opiniones" class="signature-trust">
+      <div class="trust-heading">
+        <div class="reveal">
+          <p class="eyebrow dark">Opiniones verificadas</p>
+          <h2>La confianza de quienes ya vivieron esta experiencia.</h2>
+        </div>
+        <div class="trust-rating reveal">
+          <p>Bodas.com.mx</p>
+          <strong>5.0</strong>
+          <span>33 opiniones · 100% recomienda</span>
+        </div>
+      </div>
+      <div class="trust-reviews">
+        <blockquote class="reveal"><p>“Te dan toda la atención personalizada… la calidad y color que tienen.”</p><footer><span>Laura</span><span>2026</span></footer></blockquote>
+        <blockquote class="reveal"><p>“Muy responsables y profesionales.”</p><footer><span>Ángel</span><span>2023</span></footer></blockquote>
+        <blockquote class="reveal"><p>“Todas salieron muy naturales y con mucha calidad.”</p><footer><span>Cecilia</span><span>2023</span></footer></blockquote>
+      </div>
+      <div class="trust-awards">
+        <div class="reveal">
+          <p class="eyebrow dark">Reconocimientos</p>
+          <h2>Dos Wedding Awards y un compromiso que continúa.</h2>
+          <p>Proveedor Premium en Bodas.com.mx · Wedding Awards 2022 y 2024.</p>
+          <a class="outline-link" href="https://www.bodas.com.mx/fotografos-de-bodas/snapshot-fotografia--e230783" target="_blank" rel="noopener noreferrer">Consultar todas las opiniones</a>
+        </div>
+        <div class="trust-badges reveal" aria-label="Insignias Wedding Awards 2022 y 2024">
+          <img src="assets/awards/wedding-awards-2022.jpg" width="500" height="500" alt="Wedding Awards 2022 Bodas.com.mx" loading="lazy">
+          <img src="assets/awards/wedding-awards-2024.png" width="500" height="500" alt="Wedding Awards 2024 Bodas.com.mx" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia" class="signature-experience">
+      <div class="process-heading reveal">
+        <p class="eyebrow dark">La experiencia Snapshot</p>
+        <h2>Un proceso claro para disfrutar cada momento.</h2>
+      </div>
+      <div class="process-layout">
+        <div class="process-photo reveal"><img src="signature-experience/exp-proceso.webp" width="1000" height="666" alt="Pareja durante la ceremonia de su boda" loading="lazy"></div>
+        <ol class="process-steps">
+          <li class="process-step reveal"><span>01</span><div><h3>Conversemos</h3><p>Conocemos su historia, la fecha, las locaciones y lo que desean conservar. Con esa información les ayudamos a elegir la cobertura adecuada.</p></div></li>
+          <li class="process-step reveal"><span>02</span><div><h3>Planeamos</h3><p>Definimos horarios, recorridos y momentos importantes. También compartimos ideas de fotografías, locaciones y poses.</p></div></li>
+          <li class="process-step reveal"><span>03</span><div><h3>Documentamos</h3><p>Trabajamos con un plan y un equipo coordinado. Según el paquete, la cobertura puede incluir fotografía, video, dron y entre 7 y 10 horas de acompañamiento.</p></div></li>
+          <li class="process-step reveal"><span>04</span><div><h3>Seleccionan y reciben</h3><p>A las dos semanas enviamos las fotografías para selección. La entrega completa puede estar lista en cuatro semanas o hasta cinco durante temporada alta.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="signature-locations" aria-labelledby="locations-title">
+      <div class="locations-copy reveal">
+        <p class="eyebrow dark">Cobertura regional</p>
+        <h2 id="locations-title">Fotografía de bodas en Puebla y Tlaxcala.</h2>
+        <p>Documentamos bodas en Puebla, Cholula, Tlaxcala y distintas localidades de la región. Conocemos haciendas, iglesias y espacios para celebraciones, y adaptamos cada cobertura a los tiempos y características de cada boda.</p>
+      </div>
+      <div class="locations-links reveal">
+        <a class="location-link" href="fotografo-bodas-puebla.html">
+          <span>Destino principal</span>
+          <strong>Bodas en Puebla</strong>
+          <small>Conocer cobertura →</small>
+        </a>
+        <a class="location-link" href="fotografo-bodas-tlaxcala.html">
+          <span>Cobertura regional</span>
+          <strong>Bodas en Tlaxcala</strong>
+          <small>Conocer cobertura →</small>
+        </a>
+      </div>
+    </section>
+
+    <section id="contacto" class="signature-contact">
+      <div class="contact-panel">
+        <div class="contact-intro reveal">
+          <div>
+            <p class="eyebrow">Su historia comienza aquí</p>
+            <h2>Conversemos sobre su boda.</h2>
+            <p>Cuéntennos la fecha, el lugar y cómo imaginan ese día. Les responderemos personalmente con la disponibilidad y la cobertura más adecuada.</p>
+          </div>
+          <div class="contact-investment">
+            <span>Coberturas desde</span>
+            <strong>$9,000 — $18,000 MXN</strong>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal">
+          <form id="availability-form">
+            <div class="contact-field contact-field-full">
+              <label for="contact-names">Nombres</label>
+              <input id="contact-names" name="names" type="text" placeholder="¿Cómo podemos dirigirnos a ustedes?" required>
+            </div>
+            <div class="contact-field">
+              <label for="contact-date">Fecha de la boda</label>
+              <input id="contact-date" name="date" type="date" required>
+            </div>
+            <div class="contact-field">
+              <label for="contact-place">Lugar</label>
+              <input id="contact-place" name="place" type="text" placeholder="Puebla, Tlaxcala…" required>
+            </div>
+            <div class="contact-field contact-field-full">
+              <label for="contact-service">Cobertura que les interesa</label>
+              <select id="contact-service" name="service">
+                <option>Fotografía y video</option>
+                <option>Fotografía</option>
+                <option>Video</option>
+                <option>Aún no lo sabemos</option>
+              </select>
+            </div>
+            <div class="contact-field contact-field-full">
+              <label for="contact-details">Cuéntennos un poco</label>
+              <textarea id="contact-details" name="details" placeholder="Tipo de ceremonia, locaciones o cualquier detalle importante"></textarea>
+            </div>
+            <div class="contact-actions">
+              <span>Respuesta personal por WhatsApp</span>
+              <button class="btn btn-dark" type="submit">Consultar disponibilidad</button>
+            </div>
+            <p class="contact-reservation">La fecha se reserva con contrato y un anticipo del 20% del paquete elegido.</p>
+          </form>
+        </div>
+      </div>
+      <div class="social-links"><a href="fotografo-bodas-puebla.html">Bodas en Puebla</a><a href="https://www.instagram.com/snapshot.foto/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.facebook.com/snaps.fotografia/" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.youtube.com/@SnapshotFotograf%C3%ADa" target="_blank" rel="noopener noreferrer">YouTube</a></div>
+    </section>
+  </main>
+  <a class="whatsapp" href="https://wa.me/522461718808?text=Hola%20Snapshot%20Fotograf%C3%ADa%2C%20vi%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20cotizar%20mi%20evento." onclick="gtag('event','click_whatsapp_floating')">WhatsApp</a>
+
+  <div class="snapshot-lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Cerrar imagen">×</button>
+    <button class="lightbox-prev" type="button" aria-label="Imagen anterior">‹</button>
+    <figure>
+      <img src="" alt="">
+    </figure>
+    <button class="lightbox-next" type="button" aria-label="Imagen siguiente">›</button>
+  </div>
+  <script src="script.js?v=20260811-3"></script>
+</body>
+</html>
