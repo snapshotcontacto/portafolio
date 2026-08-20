@@ -318,9 +318,11 @@
 .trust-reviews blockquote p{
   min-height:3.2em;
   margin:0 0 26px;
-  font-family:'Bodoni Moda',Georgia,serif;
-  font-size:clamp(1.35rem,2vw,2rem);
-  line-height:1.25;
+  font-family:'Lora',Georgia,serif;
+  font-size:clamp(1.32rem,1.75vw,1.85rem);
+  font-weight:500;
+  line-height:1.35;
+  letter-spacing:-.015em;
 }
 .trust-reviews footer{display:flex;justify-content:space-between;gap:16px;color:#6a645b;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
 .trust-awards{
