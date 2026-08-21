@@ -5,3 +5,4 @@
 
 /* La tipografía editorial de portada se reserva exclusivamente para index.html. */
 .blog-hero h1,.article-hero h1,.blog-intro h2,.article-body h2,.article-cta h2,.blog-card h2{font-family:'Montserrat',Arial,sans-serif;font-weight:600;letter-spacing:-.035em}
+.blog-grid{display:grid;gap:34px}
