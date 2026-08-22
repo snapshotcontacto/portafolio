@@ -746,3 +746,13 @@ a.location-link:hover{background:#171512;color:#fff}
   .process-heading h2,
   .contact-intro h2{line-height:1.06}
 }
+
+/* Equipo 2026: retratos completos y fotografía grupal */
+.founders-grid{grid-template-columns:repeat(2,minmax(0,460px));justify-content:center}
+.founder-card img{width:100%;height:auto!important;max-height:none!important;aspect-ratio:2/3!important;object-fit:contain;object-position:center}
+.team-portrait{grid-column:1/-1;margin:24px 0 0}
+.team-portrait img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;background:#171512}
+.team-portrait figcaption{display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding-top:18px;border-top:1px solid var(--line);margin-top:14px}
+.team-portrait h3{margin:0;font-family:'Bodoni Moda',Georgia,serif;font-size:clamp(1.5rem,2.2vw,2.35rem);font-weight:400;letter-spacing:.02em;text-transform:uppercase}
+.team-portrait figcaption p{margin:0;color:#6a645b;font-size:.68rem;font-weight:600;letter-spacing:.12em;text-align:right;text-transform:uppercase}
+@media(max-width:720px){.founders-grid{grid-template-columns:1fr}.founder-card img{height:auto!important;max-height:none!important}.team-portrait{margin-top:8px}.team-portrait figcaption{align-items:flex-start;flex-direction:column;gap:6px}.team-portrait figcaption p{text-align:left}}
